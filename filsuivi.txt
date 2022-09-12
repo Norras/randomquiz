@@ -1,0 +1,6 @@
+Thread fonctionnalités à incorporer : 
+- Appuyer sur un bouton pour donner une question
+- Donner le nombre de questions voulu et les donner
+- Pouvoir ajouter des questions de soi-même sur le site sans passer par le code
+- Pouvoir mettre les questions sous format PDF avec espaces pour répondre
+- Améliorer le visuel du site
