@@ -3,9 +3,12 @@
 
 function displayquestions(){
 
-    return "<form name='displayquestions' method='post' action='display.php'>
-    <label for='display'>Afficher chapitre</label>
-    <select name='display'>
+    return "<form id='displayquestions' method='post' action='display.php'>
+    <select name='display' onchange='change();' style='position: absolute;
+    left: 0%;
+    right: 89.79%;
+    top: 74.49%;
+    bottom: 0%;'>
     <optgroup label='Electromagnétisme'>
     <option value='em1'>Chapitre 1</option>
     <option value='em2'>Chapitre 2</option>
@@ -15,6 +18,5 @@ function displayquestions(){
     <option value='pq1'>Chapitre 1</option>
     <option value='pq2'>Chapitre 2</option>
     <option value='pq3'>Chapitre 3</option>
-    <option value='pq4'>Chapitre 4</option></optgroup></select>
-    <input type='submit' value='Afficher'/></form>";
+    <option value='pq4'>Chapitre 4</option></optgroup></select></form>";
 }
