@@ -10,17 +10,23 @@ function askquiz($num='1'){
     width: 441px;
     height: 70px;
     left: calc(50% - 441px/2 - 0.5px);
-    top: calc(50% - 70px/2 - 91px);'>
-    <input id='num' name='num' value='$num' style='position: absolute;left: 0%;right: 85.70%;top: 0%;bottom: 0%;background: #D9D9D9;border-radius: 6px 0px 0px 6px;border-width: 0;'/>
+    top: 386px;
+    bottom:568px;
+    right:500px;'>
+    <input id='num' name='num' value='$num' style='position: absolute;left: 0%;right: 85.70%;top: 0%;bottom: 0%;background: #215376;border-radius: 6px 0px 0px 6px;border-width: 0;font-family:CM;font-size:100%;color:white;'/>
     <select name='deroule' style='
     position: absolute;
-    left: 12.93%;
-    right: 9.07%;
-    top: 0%;
-    bottom: 0%;
-    background: #ABA4A4;
+    left: 57px;
+    right: 40px;
+    top: 0px;
+    bottom: 0px;
+    background: #094067;
     border-radius: 0px;
-    border-width: 0;'>
+    border-width: 0;
+    font-family:CM;
+    font-size:100%;
+    color: white;
+    '>
     <optgroup label='Electromagnétisme'>
     <option value='em1'>Chapitre 1</option>
     <option value='em2'>Chapitre 2</option>
@@ -36,14 +42,17 @@ function askquiz($num='1'){
     right: 0%;
     top: 0%;
     bottom: 0%;
-    background: #D9D9D9;
-    border-radius: 0px 6px 6px 0px;border-width: 0;'>
+    background: #215376;
+    border-radius: 0px 6px 6px 0px;border-width: 0;
+    font-family:CM;
+    font-size:100%;
+    color:white;'>
     <option value='4'>4</option>
     <option value='8'>8</option>
     <option selected value='12'>12</option>
     <option value='16'>16</option>
     <option value='20'>20</option></select></div>
-    <input id='send' type='submit' value='Generer les questions' style='position: absolute;width: 303px;height: 44px;left: calc(50% - 303px/2 - 0.5px);top: calc(50% - 44px/2 + 22px);background: #D9D9D9;border-radius: 6px;border-width: 0;'>
+    <input id='send' type='submit' value='Générer les questions' style='position: absolute;width: 303px;height: 44px;left: calc(50% - 303px/2 - 0.5px);top: 512px;bottom:468px;background: #ef4565;border-radius: 6px;border-width: 0;color: #fffffe;'>
     </form>\n";
 }
 // TEST

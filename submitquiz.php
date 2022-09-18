@@ -26,4 +26,11 @@ function submitquiz($question=''){
     
 }
 
+
+
+function submitbutton(){
+    return "<div class='submitbutton'>
+    <a class='submitbuttontext' href>Soumettre une question</a>
+    </div>";
+}
 ?>

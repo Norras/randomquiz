@@ -1,0 +1,136 @@
+@font-face {
+    font-family:CM;
+    src:url(cm_sans_serif.ttf);
+}
+
+body{
+    font-family:CM;
+}
+
+input[type="submit"]{
+    font-family: CM;
+    font-size: 100%;
+}
+
+.deroule .button {
+    display:block;
+    height:43.38px;
+    width: 105px;
+
+}
+li{
+    list-style-type:none;
+}
+.deroule{
+    margin-bottom:0px;
+    margin-top:0px;
+    padding-left:0px;
+}
+a {
+    color:white;
+    text-decoration: none;
+}
+a:active{
+    color: white;
+}
+.deroule li div{
+    display:none;
+}
+.deroule li:hover div,.deroule li:focus div {
+    display:block;
+}
+.deroule{
+    box-sizing: border-box;
+    position: absolute;
+    width: 260px;
+    height: 37px;
+    left: calc(50% - 260px/2 - 130px);
+    right: 880px;
+    top: calc(50% - 50px/2 + 73px);
+    background: #3da9fc;
+    border-radius: 6px 0px 0px 0px;
+}
+.boxderoule{
+    /* position: absolute; */
+    width: 260px;
+    height: 213px;
+    left: 0px;
+    top: 20.02%;
+    bottom: 60.84%;
+    margin-top: 37px;
+    background: #ef4565;
+    border-radius: 0px 0px 6px 6px;
+}
+.boxderoule ul{
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.boxderoule ul li ul{
+    padding-left:0px;
+    padding-bottom:5px;
+    padding-right: 0px;
+    padding-top:0px;
+}
+.boxderoule ul li .matiere{
+    font-weight: bold;
+}
+.deroule .button .buttontext{
+    position:
+    absolute;
+    text-align: center;
+    width: 260px;
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+    top:0.4px;
+    right: 0px;
+    padding-right: 0px;
+    color: #fffffe;
+}
+
+.submitbutton {
+    position: absolute;
+    width: 260px;
+    height: 37px;
+    left: calc(50% - 260px/2 + 130px);
+    top: calc(50% - 50px/2 + 73px);
+    border-radius: 0px 6px 0px 0px;
+
+    background: #3da9fc;
+}
+
+.submitbutton .submitbuttontext {
+    position:
+    absolute;
+    text-align: center;
+    width: 260px;
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 18px;
+    padding-right: 0px;
+    color: #fffffe;
+}
+
+.cloud1 {
+    position: absolute;
+    width: 159px;
+    height: 102px;
+    left: calc(50% - 159px/2 - 285.08px);
+    top: calc(50% - 102px/2 - 34.85px);
+    opacity: 80%;
+}
+
+.cloud2{
+    position: absolute;
+    transform:
+    scaleX(-1);
+    width: 159px;
+    height: 102px;
+    left: calc(50% - 159px/2 + 286.5px);
+    top: calc(50% - 102px/2 - 34.85px);
+    opacity: 80%;
+}
