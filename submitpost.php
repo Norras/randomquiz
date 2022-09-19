@@ -13,14 +13,14 @@ echo '<body>
 <link rel="stylesheet" href="dropdown.css"></link>
 <link rel="stylesheet" href="submitcase.css"></link>
 <script type="application/javascript" src="change.js"></script>
-
+<script type="application/javascript" src="ajaxpost.js"></script>
 
 <div style="position: absolute;
 height: 170px;
 left: 0px;
 right: 0px;
 top: 0px;
-background:#094067;"><h2 style="text-align:center;color:white;font-size:155%;">Générateur de questions pour tyty</h2>';
+background:#094067;"><a href="./post.php" style="position: absolute;top: calc(50% - 88px/2 - 15px);text-align:center;color:white;font-size:155%;left: calc(50% - 386px/2);">Générateur de questions pour tyty</a>';
 echo "<img src='./cloud.png' alt='nuage' class='cloud1'>";
 echo "<img src='./cloud.png' alt='nuage' class='cloud2'>";
 echo displaydown();

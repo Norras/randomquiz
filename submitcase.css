@@ -31,26 +31,26 @@
     right: 0%;
     top: 0%;
     bottom: 0%;
-    
-    background: #B93B3B;
+    background: #215376;
     border-radius: 0px 6px 6px 0px;
     border-width: 0;
-    font-family:CM;
+    font-family:
+    CM;
     font-size:100%;
-    
+    color: white;
 }
 
 .questiontextcase {
     position: absolute;
-left: 0%;
-right: 32.09%;
-top: 0%;
-bottom: 0%;
-
-background: #9AA2E3;
-border-radius: 6px 0px 0px 6px;
-text-decoration: none;
-border-width: 0;
-font-family:CM;
-font-size:100%;
+    left: 0%;
+    right: 32.09%;
+    top: 0%;
+    bottom: 0%;
+    background: #094067;
+    border-radius: 6px 0px 0px 6px;
+    text-decoration: none;
+    border-width: 0;
+    font-family:
+    CM;
+    color: white;font-size:100%;
 }
