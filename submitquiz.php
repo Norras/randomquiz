@@ -7,11 +7,9 @@ function submitquiz($question=''){
     $question=htmlspecialchars($question);
 
     return "<form name='submitquiz' action='' onsubmit='return ajaxpost();' method='post'>
-    <label for='question'>Question</label>
-    <input id='question' name='question' value='$question'/>
-    <input type='submit' value='Soumettre'/>
-    <label for='deroule'>Choisir chapitre</label>
-    <select name='deroule'>
+    <div class='submitdiv'>
+    <input class='questiontextcase' id='question' name='question' value='$question'/>
+    <select class='submitselect' name='deroule'>
     <optgroup label='Electromagnétisme'>
     <option value='em1'>Chapitre 1</option>
     <option value='em2'>Chapitre 2</option>
@@ -22,7 +20,9 @@ function submitquiz($question=''){
     <option value='pq2'>Chapitre 2</option>
     <option value='pq3'>Chapitre 3</option>
     <option value='pq4'>Chapitre 4</option></optgroup>
-    </select></form>";
+    </select></div>
+    <input class='submitformsend' type='submit' value='Soumettre'/>
+    </form>";
     
 }
 

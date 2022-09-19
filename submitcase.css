@@ -1,0 +1,56 @@
+@font-face {
+    font-family:CM;
+    src:url(cm_sans_serif.ttf);
+}
+
+.submitdiv{
+    position: absolute;
+    width: 536px;
+    height: 73px;
+    left: calc(50% - 536px/2);
+    top: 386px;
+    bottom: 512px;
+}
+
+.submitformsend{
+    position: absolute;
+    width: 303px;
+    height: 44px;
+    left: calc(50% - 303px/2 - 0.5px);
+    top: 512px;
+    bottom:468px;
+    background: #ef4565;
+    border-radius: 6px;
+    border-width: 0;
+    color: #fffffe;
+}
+
+.submitselect {
+    position: absolute;
+    left: 67.91%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    background: #B93B3B;
+    border-radius: 0px 6px 6px 0px;
+    border-width: 0;
+    font-family:CM;
+    font-size:100%;
+    
+}
+
+.questiontextcase {
+    position: absolute;
+left: 0%;
+right: 32.09%;
+top: 0%;
+bottom: 0%;
+
+background: #9AA2E3;
+border-radius: 6px 0px 0px 6px;
+text-decoration: none;
+border-width: 0;
+font-family:CM;
+font-size:100%;
+}
