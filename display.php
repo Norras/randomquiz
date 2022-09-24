@@ -5,6 +5,10 @@ include 'debut_html.php';
 include 'displayform.php';
 include 'submitquiz.php';
 include 'deleteform.php';
+include 'debut_html.php';
+include 'displayform.php';
+include 'submitquiz.php';
+include 'deleteform.php';
 
 // if (isset($_POST['display']) AND !empty($_POST['display'])){
 //     preg_match('/^(.*)(\d)$/',$_POST['display'],$m);
