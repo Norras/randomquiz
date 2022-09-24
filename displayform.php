@@ -26,13 +26,13 @@ function displaydown(){
     echo "<ul class='deroule'><li class='button'><a class='buttontext' href onclick='return false;'> Choisir chapitre</a><div class='boxderoule'><ul>
             <li><a href onclick='return false;' class='matiere'>Électromagnétique</a><ul>
                 <li><a href='display.php?matiere=em&chapitre=1'>Chapitre 1</a></li>
-                <li><a href>Chapitre 2</a></li>
-                <li><a href>Chapitre 3</a></li>
-                <li><a href>Chapitre 4</a></li></ul></li>
+                <li><a href='display.php?matiere=em&chapitre=2'>Chapitre 2</a></li>
+                <li><a href='display.php?matiere=em&chapitre=3'>Chapitre 3</a></li>
+                <li><a href='display.php?matiere=em&chapitre=4'>Chapitre 4</a></li></ul></li>
             <li><a href onclick='return false;' class='matiere'>Physique Quantique</a><ul>
-                <li><a href>Chapitre 1</a></li>
-                <li><a href>Chapitre 2</a></li>
-                <li><a href>Chapitre 3</a></li>
-                <li><a href>Chapitre 4</a></li></ul></li>
+                <li><a href='display.php?matiere=pq&chapitre=1'>Chapitre 1</a></li>
+                <li><a href='display.php?matiere=pq&chapitre=2'>Chapitre 2</a></li>
+                <li><a href='display.php?matiere=pq&chapitre=3'>Chapitre 3</a></li>
+                <li><a href='display.php?matiere=pq&chapitre=4'>Chapitre 4</a></li></ul></li>
             </ul></div></li></ul>";
 }
