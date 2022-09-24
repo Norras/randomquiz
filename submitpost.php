@@ -20,7 +20,7 @@ height: 170px;
 left: 0px;
 right: 0px;
 top: 0px;
-background:#094067;"><a href="./post.php" style="position: absolute;top: calc(50% - 88px/2 - 15px);text-align:center;color:white;font-size:155%;left: calc(50% - 386px/2);">Générateur de questions pour tyty</a>';
+background:#094067;"><a href="./post.php" id="home">Générateur de questions pour tyty</a>';
 echo "<img src='./cloud.png' alt='nuage' class='cloud1'>";
 echo "<img src='./cloud.png' alt='nuage' class='cloud2'>";
 echo displaydown();

@@ -24,11 +24,9 @@ if (isset($_POST['num']) AND !empty($_POST['num']) AND isset($_POST['deroule']) 
         $pdf->Output();
     } else {
         echo "<h2> Aucune question enregistrée.</h2>\n";
-        echo "<form action='post.php'><input type='submit' value='Retour'/></form>";
     }
 } else {
     echo "<h2> Erreur, aucun choix selectionné.</h2>\n";
-    echo "<form action='post.php'><input type='submit' value='Retour'/></form>";
 }
 
 

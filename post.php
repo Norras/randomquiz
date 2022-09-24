@@ -19,7 +19,7 @@ height: 170px;
 left: 0px;
 right: 0px;
 top: 0px;
-background:#094067;"><a href style="position: absolute;top: calc(50% - 88px/2 - 15px);text-align:center;color:white;font-size:155%;left: calc(50% - 386px/2);">Générateur de questions pour tyty</a>';
+background:#094067;"><a href id="home">Générateur de questions pour tyty</a>';
 echo displaydown();
 echo submitbutton();
 echo "<img src='./cloud.png' alt='nuage' class='cloud1'>";

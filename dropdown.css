@@ -12,6 +12,17 @@ input[type="submit"]{
     font-size: 100%;
 }
 
+div #home:hover{
+    color:#ef4565;
+}
+#home{
+    position: absolute;
+    top: calc(50% - 88px/2 - 15px);
+    text-align:center;
+    color:white;
+    font-size:155%;
+    left: calc(50% - 386px/2);
+}
 .deroule .button {
     display:block;
     height:43.38px;

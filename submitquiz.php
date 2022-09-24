@@ -8,7 +8,7 @@ function submitquiz($question=''){
 
     return "<form name='submitquiz' action='' onsubmit='return ajaxpost();' method='post'>
     <div class='submitdiv'>
-    <input class='questiontextcase' id='question' name='question' value='$question'/>
+    <input placeholder='Saisissez une question..' class='questiontextcase' id='question' name='question' value='$question'/>
     <select class='submitselect' name='deroule'>
     <optgroup label='Electromagnétisme'>
     <option value='em1'>Chapitre 1</option>
