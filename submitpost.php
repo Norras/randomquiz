@@ -14,7 +14,7 @@ echo '<body>
 <link rel="stylesheet" href="submitcase.css"></link>
 <script type="application/javascript" src="change.js"></script>
 <script type="application/javascript" src="ajaxpost.js"></script>
-
+<script type="application/javascript" src="select.js"></script>
 <div style="position: absolute;
 height: 170px;
 left: 0px;
