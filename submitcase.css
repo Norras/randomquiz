@@ -84,3 +84,20 @@
     CM;
     color: white;font-size:100%;
 }
+
+#getback{
+    position: absolute;
+    display:
+    none;
+    height: 19px;
+    left: 85.82%;
+    right: 0%;
+    top: 73px;
+    text-decoration: none;
+    color: white;font-size:100%;
+    background: #094067;
+    border-width: 0;
+    font-family:
+    CM;
+    border-radius: 0px 0px 6px 6px;
+}

@@ -56,12 +56,12 @@ background: #094067;'></div>
 
 
 if (isset($_GET['chapitre']) AND isset($_GET['matiere']) AND !empty($_GET['chapitre']) AND !empty($_GET['matiere'])){
-    $m="./".$_GET['matiere']."/chapitre".$_GET['chapitre'].".txt";
+    $m="./data/".$_GET['matiere']."/chapitre".$_GET['chapitre'].".txt";
     $arr=readtxt($m);
     if (is_array($arr)){
         echo deleteselection($arr,$_GET['matiere'],$_GET['chapitre']);
     } else {
-        echo "<h2>Aucune question enregistrée.</h2>";
+        echo "<h2>Aucune question enregistrée.</h2><style>#selectonoff{display:none;}</style>";
     }
 }
 echo "</div></div>";
