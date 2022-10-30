@@ -1,4 +1,6 @@
 <?php
+
+header('Content-type: text/html; charset=utf-8');
 if (isset($_POST['question']) AND !empty($_POST['question']) AND !empty($_POST['deroule'])){
 
     if (!empty($_POST['newchapter']) AND preg_match('/(.*)(addnewchap)/',$_POST['deroule'],$m)){

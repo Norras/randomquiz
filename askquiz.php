@@ -4,6 +4,20 @@
 
 function askquiz($num='1'){
     $num=htmlspecialchars($num);
+    $array=scandir("./data");
+    $options="";
+    array_shift($array);
+    array_shift($array);
+    foreach($array as $k=>$dir){
+        $options.="<optgroup label='".$dir."'>";
+        $subarray=scandir("./data/".$dir);
+        array_shift($subarray);
+        array_shift($subarray);
+        foreach($subarray as $i=>$file){
+            preg_match("/(.*).txt/",$file,$m);
+            $options.="<option value='".$dir."/".$m[1]."'>".$m[1]."</option>\n";
+        }
+    }
 
     return "<form action='questions.php' method='post'>
     <div style='position: absolute;
@@ -26,17 +40,7 @@ function askquiz($num='1'){
     font-family:CM;
     font-size:100%;
     color: white;
-    '>
-    <optgroup label='Electromagnétisme'>
-    <option value='em1'>Chapitre 1</option>
-    <option value='em2'>Chapitre 2</option>
-    <option value='em3'>Chapitre 3</option>
-    <option value='em4'>Chapitre 4</option></optgroup>
-    <optgroup label='Physique Quantique'>
-    <option value='pq1'>Chapitre 1</option>
-    <option value='pq2'>Chapitre 2</option>
-    <option value='pq3'>Chapitre 3</option>
-    <option value='pq4'>Chapitre 4</option></optgroup></select>
+    '>".$options."</select>
     <select name='police' style='position: absolute;
     left: 90.93%;
     right: 0%;

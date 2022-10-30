@@ -56,7 +56,7 @@ background: #094067;'></div>
 
 
 if (isset($_GET['chapitre']) AND isset($_GET['matiere']) AND !empty($_GET['chapitre']) AND !empty($_GET['matiere'])){
-    $m="./data/".$_GET['matiere']."/chapitre".$_GET['chapitre'].".txt";
+    $m="./data/".$_GET['matiere']."/".$_GET['chapitre'].".txt";
     $arr=readtxt($m);
     if (is_array($arr)){
         echo deleteselection($arr,$_GET['matiere'],$_GET['chapitre']);

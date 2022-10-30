@@ -5,7 +5,7 @@
 
 function submitquiz($question=''){
     $question=htmlspecialchars($question);
-    $arr=htmlspecialchars("&larr");
+    $arr=htmlspecialchars("Retour");
     $array=scandir("./data");
     $options="";
     array_shift($array);

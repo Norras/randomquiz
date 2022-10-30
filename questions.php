@@ -1,9 +1,11 @@
 <?php
 include 'read.php';
+
 if (isset($_POST['num']) AND !empty($_POST['num']) AND isset($_POST['deroule']) AND !empty($_POST['deroule'])){
-    preg_match('/^(.*)(\d)$/',$_POST['deroule'],$m);
-    $m[2]="/chapitre".$m[2].".txt";
-    $arr=readtxt("./".$m[1].$m[2]);
+    preg_match('@^(.*)/(.*)$@',$_POST['deroule'],$m);
+    
+    $m[2]="/".$m[2].".txt";
+    $arr=readtxt("./data/".$m[1].$m[2]);
     if (is_array($arr)){
         if (count($arr)<$_POST['num']){
             $_POST['num']=count($arr);
