@@ -13,7 +13,7 @@ if (isset($_POST['question']) AND !empty($_POST['question']) AND !empty($_POST['
         preg_match('/^(.*)(\d)$/',$_POST['deroule'],$m);
     }
     if (!is_dir("./data/".$m[1])){
-        mkdir("./data/".$m[1]."/",0700,true);
+        mkdir("./data/".$m[1]."/",0777,true);
     }
     $file=fopen("./data/".$m[1]."/".$m[2].".txt","a+");
     fputs($file,$_POST['question']."\n");

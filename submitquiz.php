@@ -44,7 +44,7 @@ function submitquiz($question=''){
 
 function submitbutton(){
     return "<div class='submitbutton'>
-    <a class='submitbuttontext' href='./submitpost.php'>Soumettre une question</a>
+    <a class='submitbuttontext' href='./submitpost'>Soumettre une question</a>
     </div>";
 }
 ?>

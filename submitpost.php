@@ -20,7 +20,7 @@ echo '<body>
 position: inherit;height: 170px;
 width:100%;
 background:#094067;
-background:#094067;"><a href="./post.php" id="home">Générateur de questions pour tyty</a>';
+background:#094067;"><a href="./" id="home">Générateur de questions pour tyty</a>';
 echo "<a href='https://fr.wikipedia.org/wiki/Special:Random' target='_blank'><img src='./cloud.png' alt='nuage' class='cloud1'></a>";
 echo "<a href='https://en.wikipedia.org/wiki/Special:Random' target='_blank'><img src='./cloud.png' alt='nuage' class='cloud2'></a>";
 echo displaydown();

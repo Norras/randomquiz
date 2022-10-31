@@ -15,7 +15,7 @@ function displaydown(){
         array_shift($subarray);
         foreach($subarray as $i=>$file){
             preg_match("/(.*).txt/",$file,$m);
-            $options.="<li><a href='display.php?matiere=".$dir."&chapitre=".$m[1]."'>".$m[1]."</a></li>\n";
+            $options.="<li><a href='display?matiere=".$dir."&chapitre=".$m[1]."'>".$m[1]."</a></li>\n";
         }
         $options.="</ul></li>\n";
     }
