@@ -1,5 +1,5 @@
 <?php
-include 'read.php';
+include 'ressources.php';
 
 if (isset($_POST['num']) AND !empty($_POST['num']) AND isset($_POST['deroule']) AND !empty($_POST['deroule'])){
     preg_match('@^(.*)/(.*)$@',$_POST['deroule'],$m);
