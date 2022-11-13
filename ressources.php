@@ -25,9 +25,13 @@ function displaydown(){
         "</ul></div></li></ul>";
 }
 
+function displaybutton(){
+    return "<div class='deroule'><a class='buttontext' href='subjects'>Chapitres</a></div>";
+}
+
 function submitbutton(){
     return "<div class='submitbutton'>
-    <a class='submitbuttontext' href='./submitpost'>Soumettre une question</a>
+    <a class='submitbuttontext' href='./submit'>Soumettre</a>
     </div>";
 }
 
@@ -58,17 +62,24 @@ function submitquiz($question=''){
 
     return "<form id='submitquiz' action='' onsubmit='return ajaxpost();' method='post' onchange='selectchap();selectsub();'>
     <div class='submitdiv'>
-    <input placeholder=' Saisissez une question..' class='questiontextcase' id='question' name='question' value='$question'/>
-    <select class='submitselect' name='deroule'>
-    <option value='' disabled selected hidden>Choisir chapitre..</option>"
-    .$options.
-    "<option value='newfromnew'>+ Add new school subject</option>
-    </select>
-    <input placeholder='Nommez un chapitre..' name='newchapter' id='newchapter'></input>
-    <input placeholder='Nommez une matière..' name='newmatiere' id='newmatiere'></input>
-    <div id='returnbutton'>
-    <input type='button' id='getback' value=".$arr." onclick='backbutton();'/></div></div>
-    <input class='submitformsend' type='submit' value='Soumettre'/>
+        <div id='submitinfos'>
+            <input placeholder=' Saisissez une question..' class='questiontextcase' id='question' name='question' value='$question'/>
+            <select class='submitselect' name='deroule'>
+            <option value='' disabled selected hidden>Choisir chapitre..</option>"
+            .$options.
+            "<option value='newfromnew'>+ Add new school subject</option>
+            </select>
+        </div>
+        <div id='newsubchap'>
+            <button type='button' id='activatechap'><span>Add a Chapter..</span></button>
+            <input placeholder='Nommez un chapitre..' name='newchapter' id='newchapter'></input>
+            <input placeholder='Nommez une matière..' name='newmatiere' id='newmatiere'></input>
+            <button type='button' id='activatesub'><span>Add a Subject..</span></button>
+        </div>
+        <div id='divsendbutton'>
+            <input class='submitformsend' type='submit' value='Soumettre'/>
+        </div>
+    </div>
     </form>";
 }
 
@@ -107,9 +118,11 @@ function deleteselection($arr=array(),$mat,$chap){
     $_SESSION['data']=$arr;
     $_SESSION['matiere']=$mat;
     $_SESSION['chapitre']=$chap;
-    return "<form action='deleteallfiles.php' class='deleteselection' method='post'>".$s."<input id='deletebutton' type='submit' value='Supprimer'/>
+    return "<form id='deleteform' action='' onsubmit='return ajaxdelete();' method='post'>".$s."<input id='deletebutton' type='submit' value='Supprimer'/>
     </form>";
 }
+
+
 function debut_html($title) {
     return
       "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML Basic 1.1//EN'
@@ -143,43 +156,87 @@ function askquiz($num='1'){
     }
 
     return "<form action='questions.php' method='post'>
-    <div style='position: absolute;
-    width: 441px;
-    height: 70px;
-    left: calc(50% - 441px/2 - 0.5px);
-    top: 386px;
-    bottom:568px;
-    right:500px;'>
-    <input id='num' name='num' value='$num' style='position: absolute;left: 0%;right: 85.70%;top: 0%;bottom: 0%;background: #215376;border-radius: 6px 0px 0px 6px;border-width: 0;font-family:CM;font-size:100%;color:white;'/>
-    <select name='deroule' style='
-    position: absolute;
-    left: 57px;
-    right: 40px;
-    top: 0px;
-    bottom: 0px;
-    background: #094067;
-    border-radius: 0px;
-    border-width: 0;
-    font-family:CM;
-    font-size:100%;
-    color: white;
+    <div style='display: flex;
+                padding: 1rem;
+                bottom: 0;
+                right: 0;
+                top: 0;
+                left: 0;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                grid-gap: 2rem;
+                background: #90b4ce1f;
+                border-radius: 100px;
+                width: 1082px;
+                height: 300px;
+                margin: auto;
+                position: absolute;
+    '>
+    <div style='display: flex;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                grid-gap: 20px;
+                width: 100%;
+    '>
+    <input id='num' name='num' value='$num' style='display:flex;
+                                                    background: #215376;
+                                                    border-radius: 100px;
+                                                    border-width: 0;
+                                                    font-family:CM;
+                                                    font-size:100%;
+                                                    color:white;
+                                                    padding: .5rem;
+                                                    text-align: center;
+                                                    width: 2rem;
+    '/>
+    <select name='deroule' style='display: flex;
+                                background: #094067;
+                                border-radius: 100px;
+                                border-width: 0;
+                                font-family:CM;
+                                font-size:100%;
+                                color: white;
+                                padding: .5rem;
+                                width: 300px;
+
     '>".$options."</select>
-    <select name='police' style='position: absolute;
-    left: 90.93%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    background: #215376;
-    border-radius: 0px 6px 6px 0px;border-width: 0;
-    font-family:CM;
-    font-size:100%;
-    color:white;'>
-    <option value='4'>4</option>
-    <option value='8'>8</option>
-    <option selected value='12'>12</option>
-    <option value='16'>16</option>
-    <option value='20'>20</option></select></div>
-    <input id='send' type='submit' value='Générer les questions' style='position: absolute;width: 303px;height: 44px;left: calc(50% - 303px/2 - 0.5px);top: 512px;bottom:468px;background: #ef4565;border-radius: 6px;border-width: 0;color: #fffffe;'>
+    <select name='police' style='display: flex;
+                                left: 90.93%;
+                                right: 0%;
+                                top: 0%;
+                                bottom: 0%;
+                                background: #215376;
+                                border-radius: 100px;
+                                border-width: 0;
+                                font-family:CM;
+                                font-size:100%;
+                                color:white;
+                                padding: .5rem;
+                                width: 4rem;
+
+    '>
+        <option value='4'>4</option>
+        <option value='8'>8</option>
+        <option selected value='12'>12</option>
+        <option value='16'>16</option>
+        <option value='20'>20</option>
+    </select></div>
+    <div style='width: 100%;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+    '>
+    <input id='send' type='submit' value='Générer les questions' style='background: #ef4565;
+                                                                        border-radius: 20px;
+                                                                        border-width: 0;
+                                                                        color: #fffffe;
+                                                                        padding: .8rem;'>
+    </div>
+</div>
+    
     </form>\n";
 }
 function page(){
@@ -192,7 +249,7 @@ function page(){
     <a href="./" id="home">Générateur de questions pour tyty</a>
     <script type="application/javascript" src="ressources.js"></script>
     <a href="https://fr.wikipedia.org/wiki/Special:Random" target="_blank"><img src="./cloud.png" alt="nuage" class="cloud1"></a>
-    <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><img src="./cloud.png" alt="nuage" class="cloud2"></a>'.displaydown().submitbutton().
+    <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><img src="./cloud.png" alt="nuage" class="cloud2"></a>'.displaybutton().submitbutton().
     '</div>
     <div style="position: absolute;
                 height: 92px;
@@ -202,5 +259,35 @@ function page(){
                 background: #094067;">
     </div>';
 }
+
+
+
+// create divs with rows of tiles 
+function displaytiles(){
+    $array=scandir("./data");
+    array_shift($array);
+    array_shift($array);
+    $s="<div class='grid'>";
+    $i=0;
+    foreach($array as $k=>$dir){
+        $s.="<h2>".$dir."</h2>";
+        $subarray=scandir("./data/".$dir);
+        array_shift($subarray);
+        array_shift($subarray);
+        $s.="<div class='row'>";
+        foreach($subarray as $i=>$file){
+            preg_match("/(.*).txt/",$file,$m);
+            $s.="<div class='tile' style='background-image: url(\"./data/".$dir."/".$m[1].".jpg\");'>
+            <a href='display?matiere=".$dir."&chapitre=".$m[1]."'>".$m[1]."</a>
+            </div>";
+        }
+        $s.="</div>";
+    }
+    $s.="</div>";
+    return $s;
+}
+
+
+
 
 ?>

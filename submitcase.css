@@ -6,83 +6,131 @@
 ::placeholder{
     color:#c0c0c0;
 }
+
+
+#activatesub,#activatechap{
+    background: url('https://img.icons8.com/ios-glyphs/240/215376/plus--v1.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+    font-family: CM;
+    color: black;
+    border-width: 1px;
+    border-radius: 100px;
+    padding: 1.5rem;
+    width: 2rem;
+    text-align: center;
+    font-size: inherit;
+    transition: all .2s cubic-bezier(0, 0.7, 1, 1.31);
+    /* background-color: #215376; */
+}
+
+#activatesub:hover,#activatechap:hover{
+    /* transform: scale(1.1); */
+    width: 14rem;
+    background-position: left;
+}
+
+
+#activatesub span,#activatechap span{
+    padding-left: 40px;
+    display: none;
+    cursor: pointer;
+}
+#activatesub:hover span ,#activatechap:hover span{
+    padding-left: 40px;
+    font-size: inherit;
+    display: block;
+}
+#newsubchap{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 1rem;
+}
+#submitinfos{
+    display: flex;
+    align-content: center;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
 .submitdiv{
     position: absolute;
     width: 536px;
     height: 73px;
-    left: calc(50% - 536px/2);
-    top: 386px;
-    bottom: 512px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    width: 1000px;
+    height: 300px;
+    grid-gap: 1rem;
 }
 
 .submitformsend{
-    position: absolute;
-    width: 303px;
-    height: 44px;
-    left: calc(50% - 303px/2 - 0.5px);
-    top: 512px;
-    bottom:468px;
     background: #ef4565;
-    border-radius: 6px;
+    border-radius: 50px;
     border-width: 0;
     color: #fffffe;
+    padding: 1rem;
+    width: 15rem;
 }
 
 .submitselect {
-    position: absolute;
-    left: 67.91%;
-    right: 0%;
-    top: 0%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     bottom: 0%;
     background: #215376;
-    border-radius: 0px 6px 6px 0px;
+    border-radius: 100px;
     border-width: 0;
     font-family:
     CM;
     font-size:100%;
     color: white;
+    padding: 1rem;
 }
+
 #newchapter{
-    display: none;
-    position: absolute;
-    left: 100%;
-    right: -39.18%;
-    top: 0%;
-    bottom: 0%;
+    /* display: none; */
     font-family:CM;
     background: #215376;
     border-width: 0;
     font-size:100%;
-    border-radius: 0px 6px 6px 0px;
+    border-radius: 100px;
     color: white;
+    padding: 1rem;
 }
 #newmatiere{
-    position: absolute;
-    display:none;
-    left: 67.91%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
+    /* display:none; */
     background: #215376;
     border-width: 0;
     font-family:CM;
     font-size:100%;
-    color: white; 
+    color: white;
+    padding: 1rem;
+    border-radius: 100px;
 }
 
 .questiontextcase {
-    position: absolute;
-    left: 0%;
-    right: 32.09%;
-    top: 0%;
-    bottom: 0%;
     background: #094067;
-    border-radius: 6px 0px 0px 6px;
+    border-radius: 100px;
     text-decoration: none;
     border-width: 0;
     font-family:
     CM;
-    color: white;font-size:100%;
+    color: white;
+    font-size:100%;
+    padding: 1rem;
+    width: 25rem;
 }
 
 #getback{
@@ -101,3 +149,5 @@
     CM;
     border-radius: 0px 0px 6px 6px;
 }
+
+/*stylize select elements*/

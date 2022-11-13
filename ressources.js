@@ -5,10 +5,8 @@ function selectchap(){
     var value=select.value.match(regexp);
     if (value!=null){
         input.style.display="block";
-        select.style.borderRadius="0px";
     } else {
         input.style.display="none";
-        select.style.borderRadius="0px 6px 6px 0px";
     }
 }
 
@@ -41,14 +39,13 @@ function change(){
     document.getElementById('displayquestions').submit();
 }
 function ajaxdelete(){
-    if (confirm('Voulez-vous vraiment supprimer toutes les questions ?')){
-        var xhr=new XMLHttpRequest();
-        xhr.open('POST','deleteallfiles.php');
-        xhr.onload=function(){
-            alert(xhr.response);
-        };
-        xhr.send(new FormData(deleteform));
-    }
+    var xhr=new XMLHttpRequest();
+    xhr.open('POST','deleteallfiles.php');
+    xhr.onload=function(){
+        alert(xhr.response);
+    };
+    xhr.send(new FormData(deleteform));
+    
 }
 function ajaxpost(){
     var xhr=new XMLHttpRequest();
@@ -57,7 +54,19 @@ function ajaxpost(){
         alert(xhr.response);
     };
     xhr.send(new FormData(submitquiz));
+    return false;
 }
+
+// ajax delete files from server
+function ajaxdeletefiles(){
+    var xhr=new XMLHttpRequest();
+    xhr.open('POST','deletefiles.php');
+    xhr.onload=function(){
+        alert(xhr.response);
+    };
+    xhr.send(new FormData(deleteform));
+}
+
 
 function showcheckbox(button){
     var labels=document.querySelectorAll("label>input");

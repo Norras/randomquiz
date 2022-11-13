@@ -87,7 +87,7 @@ a:active{
 .boxderoule ul li .matiere{
     font-weight: bold;
 }
-.deroule .button .buttontext{
+.buttontext{
     position:
     absolute;
     text-align: center;
@@ -143,3 +143,4 @@ a:active{
     left: calc(50% - 159px/2 + 286.5px);
     top: calc(50% - 102px/2 - 34.85px);
 }
+

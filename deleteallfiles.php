@@ -17,6 +17,15 @@
 // }
 
 // echo "Tout a bien été supprimé.\n";
+
+function deletefolderif($dir){
+    if ($files = glob($dir . "/*")) {
+        return;
+    } else {
+        rmdir($dir);
+    }
+}
+
 session_start();
 
 if (isset($_POST['deletequestions'])){
@@ -31,12 +40,15 @@ if (isset($_POST['deletequestions'])){
     foreach($all as $k=>$v){
         fwrite($file,$v);
     }
-    fclose($file);
-    unset($_SESSION);
     
+    fclose($file);
+    $dir="./data/".$_SESSION['matiere'];
+    unset($_SESSION);
     if (filesize($m)===0){
         unlink($m);
     }
+    deletefolderif($dir);
+
     echo "Les fichiers ont été supprimé.\n";
 } else {
     echo "Il n'y a eu aucune sélection.\n";
